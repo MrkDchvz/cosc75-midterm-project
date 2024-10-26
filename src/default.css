@@ -1,0 +1,138 @@
+/* Theme Modes */
+/* @media (prefers-color-scheme: light) {
+    :root {
+      --text: #0d0f05;
+      --background: #fafbf4;
+      --primary: #4b5138;
+      --secondary: #ac9ebd;
+      --accent: #7f5766;
+    }
+  } */
+
+:root {
+      --text: #f8faf0;
+      --background: #0a0b04;
+      --primary: #c1c7ae;
+      --secondary: #504260;
+      --accent: #a87f8f;
+    }    
+
+
+:root.dark-theme {
+    color-scheme: dark;
+      --text: #f8faf0;
+      --background: #0a0b04;
+      --primary: #c1c7ae;
+      --secondary: #504260;
+      --accent: #a87f8f;
+}
+
+:root.light-theme {
+    color-scheme: light ;
+      --text: #0d0f05;
+      --background: #fafbf4;
+      --primary: #4b5138;
+      --secondary: #ac9ebd;
+      --accent: #7f5766;
+}
+
+/* DEFAULTS */
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: "Oxanium", sans-serif;
+}
+
+#desktop-nav {
+    border-bottom: 1px solid var(--text);
+}
+
+
+#mobile-nav {
+    background-color: var(--background);
+    border-left: 2px solid var(--text);
+}
+
+#mobile-nav__list {
+    color: var(--text);
+}
+
+#logo {
+    font-family: "Megrim", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.theme-symbol {
+    color: var(--text);
+}
+
+
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+    background-color: var(--accent);
+}
+
+/* Hover Animations */
+
+@media (hover :hover) {
+    
+    #mobile-nav__list li:hover a::before,
+    #mobile-nav__list li:focus a::before,
+    #desktop-nav__list li:hover a::before,
+    #desktop-nav__list li:focus a::before  {
+        content: "<";
+        position: absolute;
+        right: 100%;
+    }
+    #mobile-nav__list li:hover a::after,
+    #mobile-nav__list li:focus a::after,
+    #desktop-nav__list li:hover a::after,
+    #desktop-nav__list li:focus a::after  {
+        content: ">";
+        position: absolute;
+        left: 100%;
+    }
+
+    
+    #mobile-nav__list li:hover a::before,
+    #mobile-nav__list li:hover a::after,
+    #desktop-nav__list li:hover a::before,
+    #desktop-nav__list li:hover a::after {
+        
+        animation-name: blink;
+        animation-duration: 0.2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(1,0,0,1);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
+/* Animation Defaults */
+#mobile-nav__list li {
+    transform: translateX(100%);
+    opacity: 0;
+} 
+
+#mobile-nav {
+    left: 100%;
+}
+
+#theme-symbol {
+    opacity: 0;
+}
+
+
+
