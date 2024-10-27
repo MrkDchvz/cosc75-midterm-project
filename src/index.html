@@ -21,9 +21,14 @@
     href="https://fonts.googleapis.com/css2?family=Megrim&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
     rel="stylesheet">
   <!-- SCRIPTS -->
-  <script src="../node_modules/animejs/lib/anime.min.js" defer></script>
+  <!-- Base GSAP  -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+  <!-- Text Plug in GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d20fd817d6.js" crossorigin="anonymous" defer></script>
+  <!-- Main Script
+   -->
   <script src="./script.js" defer></script>
 
 
@@ -45,7 +50,7 @@
 
 
   <!-- Mobile Nav -->
-  <nav id="mobile-nav" class="sm:hidden w-screen h-screen absolute z-0 top-0">
+  <nav id="mobile-nav" class="sm:hidden w-screen h-screen absolute z-10 top-0">
     <ul id="mobile-nav__list" class="flex flex-col items-center gap-11 text-5xl relative top-32">
       <li class="relative"><a href="#">Home</a></li>
       <li class="relative"><a href="#">Projects</a></li>
@@ -53,19 +58,17 @@
       <button class="theme-button" data-theme="dark"><i id="theme-symbol" class="fa-solid fa-moon"></i></button>
     </ul>
   </nav>
-  <button id="hamburger" class="sm:hidden absolute right-3 hamburger hamburger--emphatic z-10 top-0" type="button">
+  <button id="hamburger" class="sm:hidden absolute right-3 hamburger hamburger--emphatic z-20 top-0" type="button">
     <span class="hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
   </button>
-  <section id="hero" class="h-screen m-48">
-    <div id="hero-text" class="flex flex-row -m-28 ">
-      <p>></p>
-      <p>M</p>
-      <p>A</p>
-      <p>R</p>
-      <p>K</p>
+  <section id="hero" class="h-screen">
+    <div id="hero-header-container" class="text-3xl">
+    <h1 id="hero-header"></h1>
+    <span id="caret"></span>
     </div>
+    <p id="hero-subheader text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, nemo.</p>
   </section>
 </body>
 

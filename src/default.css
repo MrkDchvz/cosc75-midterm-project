@@ -67,6 +67,29 @@ body {
     color: var(--text);
 }
 
+#hero-header-container {
+    position: relative;
+    border: 1px solid red;
+}
+#hero-header {
+    width: fit-content;
+}
+
+#hero-header::before {
+    content: "> ";
+}
+
+#caret {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    height: 100%;
+    width: 0.4em;
+    opacity: 0;
+    background-color: var(--text);
+}
+
 
 
 .hamburger-inner,
