@@ -17,17 +17,20 @@
   <!-- Base GSAP  -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
   <!-- Text Plug in GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
+  <!-- Scroll Trigger GSAP -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/d20fd817d6.js" crossorigin="anonymous" defer></script>
   <!-- Main Script
    -->
-  <script src="./script.js" defer></script>
+  <script type="module" src="./script/script.js" defer></script>
 
 </head>
 
 <body>
 
+<!-- NAVBAR -->
   <header>
     <!-- Desktop Nav -->
     <nav id="desktop-nav" class=" hidden sm:flex h-14 items-center justify-between">
@@ -55,18 +58,84 @@
     </button>
   </header>
 
-  <!-- Main -->
-  <main class="mx-5">
+  <!-- MAIN -->
+  <main class="mx-auto max-w-screen-lg px-5">
     <!-- Hero Section -->
     <section id="home">
       <section id="hero" class="mt-28">
-        <div id="hero-header-container" class="text-4xl sm:text-7xl">
+        <div id="hero-header-container" class="text-4xl sm:text-6xl md:text-7xl">
           <h1 id="hero-header"></h1><span id="caret">_</span>
         </div>
-        <p id="hero-subheader" class=" text-lg w-5/6 my-14">I am a student at Cavite State University Bacoor Campus. My passion is to create unique website designs.</p>
+        <p id="hero-subheader" class=" text-lg sm:text-2xl  w-5/6 my-16">I am a student at Cavite State University Bacoor Campus. My passion is to create unique website designs.</p>
       </section>
-     
+
+      <section id="terminal" class="mt-48 ">
+        <!-- TERMINAL HEADER -->
+          <div id="terminal__header" class="px-4 py-2 flex justify-between items-center">
+            <div><i class="fa-solid fa-terminal"></i><p class="inline ml-2 text-sm">terminal - mark -details</p></div>
+            <div class="flex gap-2 items-center"><i class="fa-solid fa-window-minimize"></i><i class="fa-regular fa-window-restore"></i><i class="fa-solid fa-x"></i></div>
+          </div>
+          <!-- TERMINAL BODY -->
+          <div id="terminal__body" class="py-5 px-4 text-lg">
+            <!-- TERMINAL SECTION - CONTACT INFO -->
+            <div id="terminal__statement--1" class="terminal__statement">
+              <div class="input-statement">> Mark.contactInfo</div>
+              <div class="output-statement"><span class="text-orange-300">[</span><span class="text-orange-300">"</span><span class="text-teal-300">madechavez22@gmail.com</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> <span class="text-orange-300">"</span><span class="text-teal-300">github</span><span class="text-orange-300">"</span><span class="text-orange-300">]</span></div>
+            </div>
+            <!-- TERMINAL SECTION - INTERESTS -->
+            <div  id="terminal__statement--2"  class="terminal__statement">
+              <div class="input-statement">> Mark.interests</div>
+              <div class="output-statement">
+                <span class="text-orange-300">[</span>
+                <span class="text-orange-300">"</span><span class="text-teal-300">Programming</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
+                <span class="text-orange-300">"</span><span class="text-teal-300">Anime</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
+                <span class="text-orange-300">"</span><span class="text-teal-300">Reading</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span><span class="text-teal-300">Cycling</span><span class="text-orange-300">"</span>
+                <span class="text-orange-300">]</span>
+              </div>
+            </div>
+            <!-- TERMINAL SECTION - OCCUPATION -->
+            <div  id="terminal__statement--3" class="terminal__statement">
+              <div class="input-statement">> Mark.occupation</div>
+              <div class="output-statement"><span class="text-orange-300">"Student - Cavite State University Bacoor Campus"</span></div>
+            </div>
+            <!-- TERMINAL SECTION - SKILLS -->
+            <div id="terminal__statement--4" class="terminal__statement">
+              <div class="input-statement">> Mark.skills</div>
+              <div class="output-statement">
+                <span class="text-orange-300">[</span>
+                <span class="text-orange-300">"</span><span class="text-teal-300">Java</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
+                <span class="text-orange-300">"</span><span class="text-teal-300">Javascript</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
+                <span class="text-orange-300">"</span><span class="text-teal-300">Sass</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span><span class="text-teal-300">Gsap</span><span class="text-orange-300">"</span>
+                <span class="text-orange-300">]</span>
+              </div>
+            </div>
+            <!-- TERMINAL SECTION - NEW LINE -->
+            <div  id="terminal__statement--5" class="terminal__statement">
+              <div class="input-statement opacity-0">> <span class="terminal__caret">|</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
+
+    <!-- Projects Section -->
+    <!-- <section id="projects">
+      <section id="projects__header">
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+        <p class="rail-item">PROJECT</p>
+      </section>
+
+    </section> -->
     
   </main>
 </body>

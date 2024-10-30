@@ -9,19 +9,26 @@
     }
   } */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
       --text: #f8faf0;
-      --background: #0a0b04;
+      --background: #100c14;
       --primary: #39bd32;
       --secondary: #188014;
       --accent: #14b00c;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }    
 
 
 :root.dark-theme {
     color-scheme: dark;
       --text: #f8faf0;
-      --background: #0a0b04;
+      --background: #100c14;
       --primary: #e698b7;
       --secondary: #8a1541;
       --accent: #ee1769;
@@ -72,9 +79,11 @@ p {
     color: var(--text);
 }
 
-#hero-header-container {
-    
+#hero {
+    /* max-width: 90%; */
+    margin-inline: auto;
 }
+
 #hero-header {
     display: inline-block;
     color: var(--primary);
@@ -90,6 +99,40 @@ p {
     font-weight: 900;
     color: var(--primary);
 }
+
+#terminal {
+    height: 500px;
+    background-color: #0c0c0c;
+    color: white;
+    margin-bottom: 40rem ;
+}
+
+#terminal__header {
+    background-color: #000000;
+}
+
+.terminal__statement {
+    /* border: 1px solid red; */
+    padding-block: 1rem;
+
+}
+
+.output-statement {
+    opacity: 0;
+}
+
+
+#projects__header {
+    position: relative;
+    display: flex;
+    font-size: 40rem;
+}
+.rail-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 
 
@@ -131,6 +174,14 @@ p {
         animation-iteration-count: infinite;
         animation-timing-function: cubic-bezier(1,0,0,1);
     }
+}
+
+/* Misc Animations */
+.terminal__caret {
+    animation-name: blink;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1,0,0,1);
 }
 
 @keyframes blink {

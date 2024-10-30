@@ -1,4 +1,8 @@
+import { horizontalLoop } from "./helper.js";
+
+
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 // Hamburget Animation + Mobile nav animation
 const hamburger = document.getElementById("hamburger");
@@ -76,4 +80,36 @@ tlHero
   .add(blinkCaret().repeat(-1))
   .add(heroTextAnimation(), "=-.3")
 
+// Terminal Animation
+function TerminalDetails() {
+  let tl = gsap.timeline();
+  tl.from("#terminal__statement--1 .input-statement", {text : {value: "" ,duration: 1}})
+    .set("#terminal__statement--1 .output-statement", {opacity: 1})
+    .from("#terminal__statement--2 .input-statement", {text : {value: "" ,duration: 4}})
+    .set("#terminal__statement--2 .output-statement", {opacity: 1})
+    .from("#terminal__statement--3 .input-statement", {text : {value: "" ,duration: 2}})
+    .set("#terminal__statement--3 .output-statement", {opacity: 1})
+    .from("#terminal__statement--4 .input-statement", {text : {value: "" ,duration: 1}})
+    .set("#terminal__statement--4 .output-statement", {opacity: 1})
+    .to("#terminal__statement--5 .input-statement", {opacity: 1})
 
+    return tl
+
+  }
+
+
+
+let tlTerminal = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#terminal",
+    start: "top center",
+    end: "bottom bottom",
+  }
+});
+
+tlTerminal
+.add(TerminalDetails()); 
+
+
+// const railItems = document.querySelectorAll(".rail-item");
+// const loop = horizontalLoop(railItems, { reversed: true, default: 5});
