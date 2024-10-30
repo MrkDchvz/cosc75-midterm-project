@@ -1,213 +1,53 @@
-/* Theme Modes */
-/* @media (prefers-color-scheme: light) {
-    :root {
-      --text: #0d0f05;
-      --background: #fafbf4;
-      --primary: #4b5138;
-      --secondary: #ac9ebd;
-      --accent: #7f5766;
-    }
-  } */
-
+/* Reset*/
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-}
-
-:root {
-      --text: #f8faf0;
-      --background: #100c14;
-      --primary: #39bd32;
-      --secondary: #188014;
-      --accent: #14b00c;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }    
-
-
-:root.dark-theme {
-    color-scheme: dark;
-      --text: #f8faf0;
-      --background: #100c14;
-      --primary: #e698b7;
-      --secondary: #8a1541;
-      --accent: #ee1769;
-}
-
-:root.light-theme {
-    color-scheme: light ;
-      --text: #0d0f05;
-      --background: #fafbf4;
-      --primary: #49cd43;
-      --secondary: #84eb80;
-      --accent: #55f34e;
-}
-
-/* DEFAULTS */
-body {
-    background-color: var(--background);
-    color: var(--text);
-    font-family: "Oxanium", sans-serif;
-}
-
-p {
-    font-family: "Inter", serif;
-}
-
-
-#desktop-nav {
-    border-bottom: 1px solid var(--text);
-}
-
-
-#mobile-nav {
-    background-color: var(--background);
-    border-left: 2px solid var(--text);
-}
-
-#mobile-nav__list {
-    color: var(--text);
-}
-
-#logo {
-    font-family: "Megrim", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.theme-symbol {
-    color: var(--text);
-}
-
-#hero {
-    /* max-width: 90%; */
-    margin-inline: auto;
-}
-
-#hero-header {
-    display: inline-block;
-    color: var(--primary);
+  box-sizing: border-box;
 }
 
 #hero-header::before {
-    content: "> ";
-}
-
-#caret {
-    display: inline-block;
-    opacity: 1;
-    font-weight: 900;
-    color: var(--primary);
-}
-
-#terminal {
-    height: 500px;
-    background-color: #0c0c0c;
-    color: white;
-    margin-bottom: 40rem ;
-}
-
-#terminal__header {
-    background-color: #000000;
-}
-
-.terminal__statement {
-    /* border: 1px solid red; */
-    padding-block: 1rem;
-
-}
-
-.output-statement {
-    opacity: 0;
-}
-
-
-#projects__header {
-    position: relative;
-    display: flex;
-    font-size: 40rem;
-}
-.rail-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-
-
-
-.hamburger-inner,
-.hamburger-inner::before,
-.hamburger-inner::after {
-    background-color: var(--text);
+  content: "> ";
 }
 
 /* Hover Animations */
 
-@media (hover :hover) {
-    
-    #mobile-nav__list li:hover a::before,
-    #mobile-nav__list li:focus a::before,
-    #desktop-nav__list li:hover a::before,
-    #desktop-nav__list li:focus a::before  {
-        content: "<";
-        position: absolute;
-        right: 100%;
-    }
-    #mobile-nav__list li:hover a::after,
-    #mobile-nav__list li:focus a::after,
-    #desktop-nav__list li:hover a::after,
-    #desktop-nav__list li:focus a::after  {
-        content: ">";
-        position: absolute;
-        left: 100%;
-    }
+@media (hover: hover) {
+  #desktop-nav__list li:hover a::before,
+  #desktop-nav__list li:focus a::before {
+    content: "<";
+    position: absolute;
+    right: 100%;
+  }
 
-    
-    #mobile-nav__list li:hover a::before,
-    #mobile-nav__list li:hover a::after,
-    #desktop-nav__list li:hover a::before,
-    #desktop-nav__list li:hover a::after {
-        
-        animation-name: blink;
-        animation-duration: 0.2s;
-        animation-iteration-count: infinite;
-        animation-timing-function: cubic-bezier(1,0,0,1);
-    }
+  #desktop-nav__list li:hover a::after,
+  #desktop-nav__list li:focus a::after {
+    content: ">";
+    position: absolute;
+    left: 100%;
+  }
+
+  #desktop-nav__list li:hover a::before,
+  #desktop-nav__list li:hover a::after {
+    animation-name: blink;
+    animation-duration: 0.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1, 0, 0, 1);
+  }
 }
 
 /* Misc Animations */
 .terminal__caret {
-    animation-name: blink;
-    animation-duration: 0.4s;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-name: blink;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1, 0, 0, 1);
 }
 
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-
-
-/* Animation Defaults */
-#mobile-nav__list li {
-    transform: translateX(100%);
+  0% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
-} 
-
-#mobile-nav {
-    left: 100%;
+  }
 }
-
-#theme-symbol {
-    opacity: 0;
-}
-
-
-

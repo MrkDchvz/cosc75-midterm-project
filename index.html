@@ -1,143 +1,199 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mark Dechavez</title>
-  <link rel="icon" href="./assets/logo.PNG" type="image/x-icon">
-  <link rel="stylesheet" href="./css/output.css">
-  <link rel="stylesheet" href="./css/hamburgers.css">
-  <link rel="stylesheet" href="./css/default.css">
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Megrim&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
-  <!-- SCRIPTS -->
-  <!-- Base GSAP  -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-  <!-- Text Plug in GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js" defer></script>
-  <!-- Scroll Trigger GSAP -->
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/d20fd817d6.js" crossorigin="anonymous" defer></script>
-  <!-- Main Script
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Dechavez</title>
+    <link rel="icon" href="./assets/logo.PNG" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/output.css" />
+    <link rel="stylesheet" href="./css/default.css" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Megrim&family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- SCRIPTS -->
+    <!-- Base GSAP  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <!-- Text Plug in GSAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"
+      defer
+    ></script>
+    <!-- Scroll Trigger GSAP -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/d20fd817d6.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <!-- Main Script
    -->
-  <script type="module" src="./script/script.js" defer></script>
+    <script type="module" src="./script/script.js" defer></script>
+  </head>
 
-</head>
+  <body
+    class="dark:bg-backgrounddark bg-background dark:text-textdark font-body"
+  >
+    <!-- NAVBAR -->
+    <header id="header">
+      <!-- Desktop Nav -->
+      <nav
+        id="desktop-nav"
+        class="border-text dark:border-textdark flex h-14 items-center justify-between border-b"
+      >
+        <h1
+          id="logo"
+          class="dark:text-textdark text-text font-logo ml-8 text-xl sm:text-3xl"
+        >
+          &lt;/MARK&gt;
+        </h1>
+        <ul
+          id="desktop-nav__list"
+          class="text-md mr-8 flex h-full items-center justify-end gap-7 sm:text-lg"
+        >
+          <li class="relative"><a href="#">Projects</a></li>
+          <li class="relative"><a href="#">Contact</a></li>
+          <button class="theme-button">
+            <i
+              class="theme-symbol dark:text-textdark text-text fa-solid fa-moon"
+            ></i>
+          </button>
+        </ul>
+      </nav>
+    </header>
 
-<body>
-
-<!-- NAVBAR -->
-  <header>
-    <!-- Desktop Nav -->
-    <nav id="desktop-nav" class=" hidden sm:flex h-14 items-center justify-between">
-      <h1 id="logo" class="text-3xl ml-8">&lt;/MARK&gt;</h1>
-      <ul id="desktop-nav__list" class="h-full flex gap-7 justify-end items-center text-lg mr-8 ">
-        <li class="relative"><a href="#">Projects</a></li>
-        <li class="relative"><a href="#">Contact</a></li>
-        <button class="theme-button" data-theme="dark"><i class="theme-symbol fa-solid fa-moon"></i></button>
-      </ul>
-    </nav>
-
-    <!-- Mobile Nav -->
-    <nav id="mobile-nav" class="sm:hidden w-screen h-screen absolute z-10 top-0">
-      <ul id="mobile-nav__list" class="flex flex-col items-center gap-11 text-5xl relative top-32">
-        <li class="relative"><a href="#">Home</a></li>
-        <li class="relative"><a href="#">Projects</a></li>
-        <li class="relative"><a href="#">Contact</a></li>
-        <button class="theme-button" data-theme="dark"><i id="theme-symbol" class="fa-solid fa-moon"></i></button>
-      </ul>
-    </nav>
-    <button id="hamburger" class="sm:hidden absolute right-3 hamburger hamburger--emphatic z-20 top-0 " type="button">
-      <span class="hamburger-box">
-        <span class="hamburger-inner"></span>
-      </span>
-    </button>
-  </header>
-
-  <!-- MAIN -->
-  <main class="mx-auto max-w-screen-lg px-5">
-    <!-- Hero Section -->
-    <section id="home">
-      <section id="hero" class="mt-28">
-        <div id="hero-header-container" class="text-4xl sm:text-6xl md:text-7xl">
-          <h1 id="hero-header"></h1><span id="caret">_</span>
-        </div>
-        <p id="hero-subheader" class=" text-lg sm:text-2xl  w-5/6 my-16">I am a student at Cavite State University Bacoor Campus. My passion is to create unique website designs.</p>
-      </section>
-
-      <section id="terminal" class="mt-48 ">
-        <!-- TERMINAL HEADER -->
-          <div id="terminal__header" class="px-4 py-2 flex justify-between items-center">
-            <div><i class="fa-solid fa-terminal"></i><p class="inline ml-2 text-sm">terminal - mark -details</p></div>
-            <div class="flex gap-2 items-center"><i class="fa-solid fa-window-minimize"></i><i class="fa-regular fa-window-restore"></i><i class="fa-solid fa-x"></i></div>
+    <!-- MAIN -->
+    <main class="mx-auto max-w-screen-lg px-5">
+      <!-- Hero Section -->
+      <section id="home">
+        <section id="hero" class="mx-auto mt-28">
+          <div
+            id="hero-header-container"
+            class="text-4xl sm:text-6xl md:text-7xl"
+          >
+            <h1 id="hero-header" class="text-primary inline-block"></h1>
+            <span
+              id="caret"
+              class="opacity-1 text-primary inline-block font-black"
+              >_</span
+            >
+          </div>
+          <p id="hero-subheader" class="my-16 w-5/6 text-lg sm:text-2xl">
+            I am a 3rd year BSCS student at Cavite State University Bacoor
+            Campus. My passion is to create unique website designs.
+          </p>
+        </section>
+        <!-- Terminal -->
+        <section id="terminal" class="mb-56 mt-48 text-white">
+          <!-- TERMINAL HEADER -->
+          <div
+            id="terminal__header"
+            class="flex items-center justify-between bg-black px-4 py-2"
+          >
+            <div>
+              <i class="fa-solid fa-terminal"></i>
+              <p class="ml-2 inline text-sm">terminal - mark -details</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-window-minimize"></i
+              ><i class="fa-regular fa-window-restore"></i
+              ><i class="fa-solid fa-x"></i>
+            </div>
           </div>
           <!-- TERMINAL BODY -->
-          <div id="terminal__body" class="py-5 px-4 text-lg">
+          <div
+            id="terminal__body"
+            class="block min-h-[500px] bg-zinc-900 px-4 py-5"
+          >
             <!-- TERMINAL SECTION - CONTACT INFO -->
-            <div id="terminal__statement--1" class="terminal__statement">
+            <div id="terminal__statement--1" class="terminal__statement py-4">
               <div class="input-statement">> Mark.contactInfo</div>
-              <div class="output-statement"><span class="text-orange-300">[</span><span class="text-orange-300">"</span><span class="text-teal-300">madechavez22@gmail.com</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> <span class="text-orange-300">"</span><span class="text-teal-300">github</span><span class="text-orange-300">"</span><span class="text-orange-300">]</span></div>
+              <div class="output-statement opacity-0">
+                <span class="text-orange-300">[</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-teal-300">madechavez22@gmail.com</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">github</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">]</span>
+              </div>
             </div>
             <!-- TERMINAL SECTION - INTERESTS -->
-            <div  id="terminal__statement--2"  class="terminal__statement">
+            <div id="terminal__statement--2" class="terminal__statement py-4">
               <div class="input-statement">> Mark.interests</div>
-              <div class="output-statement">
+              <div class="output-statement opacity-0">
                 <span class="text-orange-300">[</span>
-                <span class="text-orange-300">"</span><span class="text-teal-300">Programming</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
-                <span class="text-orange-300">"</span><span class="text-teal-300">Anime</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
-                <span class="text-orange-300">"</span><span class="text-teal-300">Reading</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span>
-                <span class="text-orange-300">"</span><span class="text-teal-300">Cycling</span><span class="text-orange-300">"</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Programming</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Anime</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Reading</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Cycling</span
+                ><span class="text-orange-300">"</span>
                 <span class="text-orange-300">]</span>
               </div>
             </div>
             <!-- TERMINAL SECTION - OCCUPATION -->
-            <div  id="terminal__statement--3" class="terminal__statement">
+            <div id="terminal__statement--3" class="terminal__statement py-4">
               <div class="input-statement">> Mark.occupation</div>
-              <div class="output-statement"><span class="text-orange-300">"Student - Cavite State University Bacoor Campus"</span></div>
+              <div class="output-statement opacity-0">
+                <span class="text-orange-300"
+                  >"Student - Cavite State University Bacoor Campus"</span
+                >
+              </div>
             </div>
             <!-- TERMINAL SECTION - SKILLS -->
-            <div id="terminal__statement--4" class="terminal__statement">
+            <div id="terminal__statement--4" class="terminal__statement py-4">
               <div class="input-statement">> Mark.skills</div>
-              <div class="output-statement">
+              <div class="output-statement opacity-0">
                 <span class="text-orange-300">[</span>
-                <span class="text-orange-300">"</span><span class="text-teal-300">Java</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
-                <span class="text-orange-300">"</span><span class="text-teal-300">Javascript</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span> 
-                <span class="text-orange-300">"</span><span class="text-teal-300">Sass</span><span class="text-orange-300">"</span><span class="text-orange-300">,</span>
-                <span class="text-orange-300">"</span><span class="text-teal-300">Gsap</span><span class="text-orange-300">"</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Java</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Javascript</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Sass</span
+                ><span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Gsap</span
+                ><span class="text-orange-300">"</span>
                 <span class="text-orange-300">]</span>
               </div>
             </div>
             <!-- TERMINAL SECTION - NEW LINE -->
-            <div  id="terminal__statement--5" class="terminal__statement">
-              <div class="input-statement opacity-0">> <span class="terminal__caret">|</span></div>
+            <div id="terminal__statement--5" class="terminal__statement py-4">
+              <div class="input-statement opacity-0">
+                > <span class="terminal__caret">|</span>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
-    </section>
-
-    <!-- Projects Section -->
-    <!-- <section id="projects">
-      <section id="projects__header">
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-        <p class="rail-item">PROJECT</p>
-      </section>
-
-    </section> -->
-    
-  </main>
-</body>
-
+    </main>
+  </body>
 </html>
