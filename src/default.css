@@ -12,9 +12,9 @@
 :root {
       --text: #f8faf0;
       --background: #0a0b04;
-      --primary: #c1c7ae;
-      --secondary: #504260;
-      --accent: #a87f8f;
+      --primary: #39bd32;
+      --secondary: #188014;
+      --accent: #14b00c;
     }    
 
 
@@ -22,18 +22,18 @@
     color-scheme: dark;
       --text: #f8faf0;
       --background: #0a0b04;
-      --primary: #c1c7ae;
-      --secondary: #504260;
-      --accent: #a87f8f;
+      --primary: #e698b7;
+      --secondary: #8a1541;
+      --accent: #ee1769;
 }
 
 :root.light-theme {
     color-scheme: light ;
       --text: #0d0f05;
       --background: #fafbf4;
-      --primary: #4b5138;
-      --secondary: #ac9ebd;
-      --accent: #7f5766;
+      --primary: #49cd43;
+      --secondary: #84eb80;
+      --accent: #55f34e;
 }
 
 /* DEFAULTS */
@@ -42,6 +42,11 @@ body {
     color: var(--text);
     font-family: "Oxanium", sans-serif;
 }
+
+p {
+    font-family: "Inter", serif;
+}
+
 
 #desktop-nav {
     border-bottom: 1px solid var(--text);
@@ -68,11 +73,11 @@ body {
 }
 
 #hero-header-container {
-    position: relative;
-    border: 1px solid red;
+    
 }
 #hero-header {
-    width: fit-content;
+    display: inline-block;
+    color: var(--primary);
 }
 
 #hero-header::before {
@@ -81,13 +86,9 @@ body {
 
 #caret {
     display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 5%;
-    height: 100%;
-    width: 0.4em;
-    opacity: 0;
-    background-color: var(--text);
+    opacity: 1;
+    font-weight: 900;
+    color: var(--primary);
 }
 
 
@@ -95,7 +96,7 @@ body {
 .hamburger-inner,
 .hamburger-inner::before,
 .hamburger-inner::after {
-    background-color: var(--accent);
+    background-color: var(--text);
 }
 
 /* Hover Animations */

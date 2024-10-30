@@ -4,22 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Mark Dechavez</title>
+  <link rel="icon" href="./assets/logo.PNG" type="image/x-icon">
   <link rel="stylesheet" href="./output.css">
   <link rel="stylesheet" href="./hamburgers.css">
   <link rel="stylesheet" href="default.css">
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Megrim&family=Oxanium:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Megrim&family=Oxanium:wght@200..800&display=swap" rel="stylesheet">
   <!-- SCRIPTS -->
   <!-- Base GSAP  -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
@@ -36,40 +29,48 @@
 </head>
 
 <body>
-  <!-- Desktop Nav -->
-  <nav id="desktop-nav" class=" hidden sm:flex h-14 items-center justify-between">
-    <h1 id="logo" class="text-3xl ml-8">&lt;/MARK&gt;</h1>
-    <ul id="desktop-nav__list" class="h-full flex gap-7 justify-end items-center text-lg mr-8 ">
-      <li class="relative"><a href="#">Home</a></li>
-      <li class="relative"><a href="#">Projects</a></li>
-      <li class="relative"><a href="#">Contact</a></li>
-      <button class="theme-button" data-theme="dark"><i class="theme-symbol fa-solid fa-moon"></i></button>
-    </ul>
-  </nav>
 
+  <header>
+    <!-- Desktop Nav -->
+    <nav id="desktop-nav" class=" hidden sm:flex h-14 items-center justify-between">
+      <h1 id="logo" class="text-3xl ml-8">&lt;/MARK&gt;</h1>
+      <ul id="desktop-nav__list" class="h-full flex gap-7 justify-end items-center text-lg mr-8 ">
+        <li class="relative"><a href="#">Projects</a></li>
+        <li class="relative"><a href="#">Contact</a></li>
+        <button class="theme-button" data-theme="dark"><i class="theme-symbol fa-solid fa-moon"></i></button>
+      </ul>
+    </nav>
 
+    <!-- Mobile Nav -->
+    <nav id="mobile-nav" class="sm:hidden w-screen h-screen absolute z-10 top-0">
+      <ul id="mobile-nav__list" class="flex flex-col items-center gap-11 text-5xl relative top-32">
+        <li class="relative"><a href="#">Home</a></li>
+        <li class="relative"><a href="#">Projects</a></li>
+        <li class="relative"><a href="#">Contact</a></li>
+        <button class="theme-button" data-theme="dark"><i id="theme-symbol" class="fa-solid fa-moon"></i></button>
+      </ul>
+    </nav>
+    <button id="hamburger" class="sm:hidden absolute right-3 hamburger hamburger--emphatic z-20 top-0 " type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+  </header>
 
-  <!-- Mobile Nav -->
-  <nav id="mobile-nav" class="sm:hidden w-screen h-screen absolute z-10 top-0">
-    <ul id="mobile-nav__list" class="flex flex-col items-center gap-11 text-5xl relative top-32">
-      <li class="relative"><a href="#">Home</a></li>
-      <li class="relative"><a href="#">Projects</a></li>
-      <li class="relative"><a href="#">Contact</a></li>
-      <button class="theme-button" data-theme="dark"><i id="theme-symbol" class="fa-solid fa-moon"></i></button>
-    </ul>
-  </nav>
-  <button id="hamburger" class="sm:hidden absolute right-3 hamburger hamburger--emphatic z-20 top-0" type="button">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button>
-  <section id="hero" class="h-screen">
-    <div id="hero-header-container" class="text-3xl">
-    <h1 id="hero-header"></h1>
-    <span id="caret"></span>
-    </div>
-    <p id="hero-subheader text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, nemo.</p>
-  </section>
+  <!-- Main -->
+  <main class="mx-5">
+    <!-- Hero Section -->
+    <section id="home">
+      <section id="hero" class="mt-28">
+        <div id="hero-header-container" class="text-4xl sm:text-7xl">
+          <h1 id="hero-header"></h1><span id="caret">_</span>
+        </div>
+        <p id="hero-subheader" class=" text-lg w-5/6 my-14">I am a student at Cavite State University Bacoor Campus. My passion is to create unique website designs.</p>
+      </section>
+     
+    </section>
+    
+  </main>
 </body>
 
 </html>
