@@ -12,6 +12,48 @@ themeButtons.forEach((themeButton) => {
     multiToggleClassList(themeIcon, "fa-moon", "fa-sun");
   });
 });
+// Loading Screen
+function loadScreen() {
+  let tl = gsap.timeline();
+  tl.from("#loading-letter", {
+    duration: 1.5,
+    opacity: 0,
+    yPercent: 100,
+    ease: "power4",
+    stagger: 0.1,
+  })
+    .to("#loading-letter", {
+      opacity: 0,
+      duration: 0.1,
+      onComplete: () => {
+        gsap.set("#loading-letter", { display: "none" });
+      },
+    })
+    .to(
+      "#loading-screen--left",
+      {
+        x: "-100%",
+        duration: 0.2,
+        onComplete: () => {
+          gsap.set("#loading-screen--left", { display: "none" });
+        },
+      },
+      "parralel2",
+    )
+    .to(
+      "#loading-screen--right",
+      {
+        x: "100%",
+        duration: 0.2,
+        onComplete: () => {
+          gsap.set("#loading-screen--right", { display: "none" });
+          document.body.classList.toggle("overflow-hidden");
+        },
+      },
+      "parralel2",
+    );
+  return tl;
+}
 
 // Text Animations
 const heroHeader = document.getElementById("hero-header");
@@ -39,7 +81,10 @@ function heroTextAnimation() {
 
 let tlHero = gsap.timeline();
 
-tlHero.add(blinkCaret().repeat(-1)).add(heroTextAnimation(), "=-.3");
+tlHero
+  .add(loadScreen())
+  .add(blinkCaret().repeat(-1))
+  .add(heroTextAnimation(), "=-.3");
 
 // Terminal Animation
 function TerminalDetails() {
@@ -68,13 +113,17 @@ function TerminalDetails() {
 let tlTerminal = gsap.timeline({
   scrollTrigger: {
     trigger: "#terminal",
-    start: "top center",
+    start: "center center",
     end: "bottom bottom",
-    markers: true,
   },
 });
 
 tlTerminal.add(TerminalDetails());
+
+// Force Load on top
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
 
 // const railItems = document.querySelectorAll(".rail-item");
 // const loop = horizontalLoop(railItems, { reversed: true, default: 5});

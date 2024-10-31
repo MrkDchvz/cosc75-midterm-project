@@ -6,11 +6,11 @@ module.exports = {
     extend: {
       colors: {
         text: "#0d0f05",
-        background: "#fafbf4",
+        background: "#faf9f6",
         primary: "#49cd43",
         secondary: "#84eb80",
-        accent: "55f34e",
-        textdark: "#f8faf0",
+        accent: "#55f34e",
+        textdark: "#faf9f6",
         backgrounddark: "#100c14",
         primarydark: "#e698b7",
         secondarydark: "#8a1541",
@@ -23,5 +23,8 @@ module.exports = {
     },
     //
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light", "dark"],
+  },
 };
