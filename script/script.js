@@ -32,7 +32,7 @@ function loadScreen() {
     .to(
       "#loading-screen--left",
       {
-        x: "-100%",
+        y: "-100%",
         duration: 0.2,
         onComplete: () => {
           gsap.set("#loading-screen--left", { display: "none" });
@@ -43,7 +43,7 @@ function loadScreen() {
     .to(
       "#loading-screen--right",
       {
-        x: "100%",
+        y: "100%",
         duration: 0.2,
         onComplete: () => {
           gsap.set("#loading-screen--right", { display: "none" });
