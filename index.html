@@ -42,14 +42,16 @@
   </head>
 
   <body class="overflow-hidden font-body">
+    <div id="progress-bar" class="sticky left-0 top-0 h-1 w-0 bg-primary"></div>
     <!-- LOADING SCREEN -->
+
     <div
       id="loading-screen--left"
-      class="absolute left-0 top-0 z-20 h-1/2 w-screen bg-background"
+      class="absolute left-0 top-0 z-20 h-1/2 w-screen bg-white"
     ></div>
     <div
       id="loading-screen--right"
-      class="absolute bottom-0 right-0 z-20 h-1/2 w-screen bg-background"
+      class="absolute bottom-0 right-0 z-20 h-1/2 w-screen bg-white"
     ></div>
     <h1
       id="loading-letter"
@@ -81,13 +83,13 @@
             <div tabindex="0" role="button" class="btn m-1">Theme</div>
             <ul
               tabindex="0"
-              class="dropdown-content bg-base-300 rounded-box w-49 z-[1] p-2 shadow-2xl"
+              class="w-49 dropdown-content z-[1] rounded-box bg-base-300 p-2 shadow-2xl"
             >
               <li>
                 <input
                   type="radio"
                   name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
                   aria-label="Default"
                   value="dark"
                 />
@@ -96,7 +98,7 @@
                 <input
                   type="radio"
                   name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
                   aria-label="Coffee"
                   value="coffee"
                 />
@@ -105,7 +107,7 @@
                 <input
                   type="radio"
                   name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
                   aria-label="Light"
                   value="light"
                 />
@@ -114,7 +116,7 @@
                 <input
                   type="radio"
                   name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
                   aria-label="Forest"
                   value="forest"
                 />
@@ -123,7 +125,7 @@
                 <input
                   type="radio"
                   name="theme-dropdown"
-                  class="theme-controller btn btn-sm btn-block btn-ghost justify-start"
+                  class="theme-controller btn btn-ghost btn-sm btn-block justify-start"
                   aria-label="Synthwave"
                   value="synthwave"
                 />
@@ -148,8 +150,12 @@
             id="hero-header-container"
             class="text-4xl sm:text-6xl md:text-7xl"
           >
-            <h1 id="hero-header" class="inline-block"></h1>
-            <span id="caret" class="opacity-1 inline-block font-black">_</span>
+            <h1 id="hero-header" class="inline-block">
+              <span id="hero-header-text"></span
+              ><span id="caret" class="opacity-1 inline-block font-black"
+                >_</span
+              >
+            </h1>
           </div>
           <p id="hero-subheader" class="my-16 w-5/6 text-lg sm:text-2xl">
             I am a third-year Computer Science student at Cavite State
@@ -272,13 +278,13 @@
                 >madechavez22@gmail.com</a
               >
               <a
-                href="https://www.facebook.com/MrkDchvz"
+                href="https://github.com/MrkDchvz"
                 target="_blank"
                 class="link text-lg sm:text-3xl"
                 >Github</a
               >
               <a
-                href="www.linkedin.com/in/mark-dechavez"
+                href="https://linkedin.com/in/mark-dechavez"
                 target="_blank"
                 class="link text-lg sm:text-3xl"
                 >linkedin</a
@@ -288,7 +294,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer bg-neutral text-neutral-content items-center p-4">
+    <footer class="footer items-center bg-neutral p-4 text-neutral-content">
       <aside class="grid-flow-col items-center">
         <p id="logo" class="font-logo text-xl sm:block sm:text-3xl">
           &lt;/MARK&gt;

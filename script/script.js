@@ -1,17 +1,13 @@
-import { multiToggleClassList } from "./helper.js";
+import { multiToggleClassList, progressBarScroll } from "./helper.js";
 gsap.registerPlugin(TextPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
-const themeButtons = document.querySelectorAll(".theme-button");
-themeButtons.forEach((themeButton) => {
-  // Toggle dark theme or light theme
-  themeButton.addEventListener("click", () => {
-    document.documentElement.classList.toggle("dark");
-    // Change the appearance of theme Icon to its corresponding theme
-    const themeIcon = document.querySelector(".theme-symbol");
-    multiToggleClassList(themeIcon, "fa-moon", "fa-sun");
-  });
-});
+// Sticky Progress Bar
+const progressBar = document.getElementById("progress-bar");
+window.onscroll = function () {
+  progressBarScroll(progressBar);
+};
+
 // Loading Screen
 function loadScreen() {
   let tl = gsap.timeline();
@@ -56,7 +52,7 @@ function loadScreen() {
 }
 
 // Text Animations
-const heroHeader = document.getElementById("hero-header");
+const heroHeader = document.getElementById("hero-header-text");
 const caret = document.getElementById("caret");
 
 function blinkCaret() {
