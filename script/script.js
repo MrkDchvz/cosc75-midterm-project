@@ -40,19 +40,19 @@ tlHero.add(blinkCaret().repeat(-1)).add(heroTextAnimation(), "=-.3");
 function TerminalDetails() {
   let tl = gsap.timeline();
   tl.from("#terminal__statement--1 .input-statement", {
-    text: { value: "", duration: 1 },
+    text: { value: "", opacity: 0, duration: 1 },
   })
     .set("#terminal__statement--1 .output-statement", { opacity: 1 })
     .from("#terminal__statement--2 .input-statement", {
-      text: { value: "", duration: 4 },
+      text: { value: "", opacity: 0, duration: 4 },
     })
     .set("#terminal__statement--2 .output-statement", { opacity: 1 })
     .from("#terminal__statement--3 .input-statement", {
-      text: { value: "", duration: 2 },
+      text: { value: "", opacity: 0, duration: 2 },
     })
     .set("#terminal__statement--3 .output-statement", { opacity: 1 })
     .from("#terminal__statement--4 .input-statement", {
-      text: { value: "", duration: 1 },
+      text: { value: "", opacity: 0, duration: 1 },
     })
     .set("#terminal__statement--4 .output-statement", { opacity: 1 })
     .to("#terminal__statement--5 .input-statement", { opacity: 1 });
