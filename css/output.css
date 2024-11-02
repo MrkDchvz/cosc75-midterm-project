@@ -2889,6 +2889,14 @@ html {
     width: 1400px;
   }
 
+  .md\:w-\[1600px\] {
+    width: 1600px;
+  }
+
+  .md\:w-\[1700px\] {
+    width: 1700px;
+  }
+
   .md\:place-self-center {
     place-self: center;
   }
