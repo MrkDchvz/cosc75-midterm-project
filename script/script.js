@@ -116,10 +116,27 @@ let tlTerminal = gsap.timeline({
 
 tlTerminal.add(TerminalDetails());
 
+// PROJECT CARD ANIMATION
+let projectCard = gsap.utils.toArray(".project-card");
+projectCard.forEach((card) => {
+  console.log(card);
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: card,
+        start: "top bottom",
+        end: "bottom bottom",
+      },
+    })
+    .from(card, {
+      duration: 0.5,
+      opacity: 0,
+      yPercent: 100,
+      ease: "power4",
+    });
+});
+
 // Force Load on top
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
-
-// const railItems = document.querySelectorAll(".rail-item");
-// const loop = horizontalLoop(railItems, { reversed: true, default: 5});

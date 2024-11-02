@@ -42,7 +42,10 @@
   </head>
 
   <body class="overflow-hidden font-body">
-    <div id="progress-bar" class="sticky left-0 top-0 h-1 w-0 bg-primary"></div>
+    <div
+      id="progress-bar"
+      class="sticky left-0 top-0 z-20 h-1 w-0 bg-primary"
+    ></div>
     <!-- LOADING SCREEN -->
 
     <div
@@ -61,24 +64,28 @@
     </h1>
 
     <!-- NAVBAR -->
-    <header id="header" class="mx-auto max-w-screen-lg px-5">
+    <header
+      id="header"
+      class="sticky left-0 top-0 z-10 mx-auto max-w-screen-lg bg-base-100 px-5 pb-5"
+    >
       <!-- Desktop Nav -->
       <nav
         id="desktop-nav"
         class="flex h-14 items-center justify-center pt-6 sm:justify-between"
       >
-        <h1
+        <a
+          href="#"
           id="logo"
           class="ml-8 hidden font-logo text-xl sm:block sm:text-3xl"
         >
           &lt;/MARK&gt;
-        </h1>
+        </a>
         <ul
           id="desktop-nav__list"
           class="text-md flex h-full items-center justify-end gap-7 sm:text-lg"
         >
-          <li class="relative"><a href="#">Projects</a></li>
-          <li class="relative"><a href="#">Contact</a></li>
+          <li class="relative"><a href="#projects">Projects</a></li>
+          <li class="relative"><a href="#contact">Contact</a></li>
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn m-1">Theme</div>
             <ul
@@ -132,11 +139,6 @@
               </li>
             </ul>
           </div>
-          <!-- <button class="theme-button">
-            <i
-              class="theme-symbol fa-solid fa-moon text-text dark:text-textdark"
-            ></i>
-          </button> -->
         </ul>
       </nav>
     </header>
@@ -200,13 +202,27 @@
               <div class="output-statement opacity-0">
                 <span class="text-orange-300">[</span
                 ><span class="text-orange-300">"</span
-                ><span class="text-teal-300">madechavez22@gmail.com</span
+                ><span class="text-teal-300"
+                  ><a
+                    class="link"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=madechavez22@gmail.com"
+                    >Madechavez22@gmail.com</a
+                  ></span
                 ><span class="text-orange-300">"</span
                 ><span class="text-orange-300">,</span>
                 <span class="text-orange-300">"</span
-                ><span class="text-teal-300">github</span
-                ><span class="text-orange-300">"</span
-                ><span class="text-orange-300">]</span>
+                ><span class="text-teal-300" href="https://github.com/MrkDchvz"
+                  ><a class="link">Github</a></span
+                ><span class="text-orange-300">"</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300"
+                  ><a class="link" href="https://linkedin.com/in/mark-dechavez"
+                    >Linkedin</a
+                  ></span
+                ><span class="text-orange-300">"</span>
+                <span class="text-orange-300">]</span>
               </div>
             </div>
             <!-- TERMINAL SECTION - INTERESTS -->
@@ -247,11 +263,15 @@
                 ><span class="text-orange-300">"</span
                 ><span class="text-orange-300">,</span>
                 <span class="text-orange-300">"</span
-                ><span class="text-teal-300">Sass</span
+                ><span class="text-teal-300">Libgdx</span
                 ><span class="text-orange-300">"</span
                 ><span class="text-orange-300">,</span>
                 <span class="text-orange-300">"</span
                 ><span class="text-teal-300">Gsap</span
+                ><span class="text-orange-300">"</span>
+                <span class="text-orange-300">,</span>
+                <span class="text-orange-300">"</span
+                ><span class="text-teal-300">Visual Basic</span
                 ><span class="text-orange-300">"</span>
                 <span class="text-orange-300">]</span>
               </div>
@@ -265,8 +285,163 @@
           </div>
         </section>
       </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects">
+        <h1 class="pb-28 text-center text-4xl">PROJECTS</h1>
+        <div id="projects-body" class="flex flex-col gap-32">
+          <!-- PROJECT 1: BARREL BIRD -->
+          <div
+            class="project-card card h-3/6 bg-base-100 shadow-xl md:card-side"
+          >
+            <figure>
+              <img
+                src="./assets/barrelBird.jpg"
+                alt="Barrel Bird Gameplay screenshot"
+                class="object-cover md:h-[400px] md:w-[1500px]"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title pb-6 text-2xl">Barrel Bird</h2>
+              <p>
+                Barrel Bird is a unique twist on the classic Flappy Bird game,
+                featuring abstract art visuals and collectible coins for added
+                challenges. Players navigate a bird through obstacles while
+                aiming to gather as many coins as possible.
+              </p>
+              <div>
+                <div class="badge badge-outline badge-md sm:badge-lg">Java</div>
+                <div class="badge badge-outline badge-md sm:badge-lg">
+                  Libgdx
+                </div>
+              </div>
+              <div class="card-actions items-center justify-end">
+                <a
+                  href="https://github.com/MrkDchvz/BarrelBird"
+                  class="btn btn-primary flex items-center"
+                >
+                  <i class="fa-brands fa-github text-lg"></i>
+                  <span class="text-lg">Github</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- PROJECT 2: SYNTAX -->
+          <div
+            class="project-card card h-3/6 bg-base-100 shadow-xl md:card-side"
+          >
+            <figure>
+              <img
+                src="./assets/syntax.PNG"
+                alt="Barrel Bird Gameplay screenshot"
+                class="object-cover md:h-[400px] md:w-[1500px]"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title pb-6 text-2xl">Synstax</h2>
+              <p>
+                Synstax is a professional IT website specializing in creative
+                web design services tailored to elevate online presence. It
+                offers modern, visually appealing solutions to meet diverse
+                client needs and boost digital engagement.
+              </p>
+              <div>
+                <div class="badge badge-outline badge-md sm:badge-lg">
+                  Javascript
+                </div>
+                <div class="badge badge-outline badge-md sm:badge-lg">Sass</div>
+              </div>
+              <div class="card-actions items-center justify-end">
+                <a
+                  href="https://github.com/MrkDchvz/synstax"
+                  class="btn btn-primary flex items-center"
+                >
+                  <i class="fa-brands fa-github text-lg"></i>
+                  <span class="text-lg">Github</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- PROJECT 3: CSBH Movies -->
+          <div
+            class="project-card card h-3/6 bg-base-100 shadow-xl md:card-side"
+          >
+            <figure>
+              <img
+                src="./assets/csbh.PNG"
+                alt="Barrel Bird Gameplay screenshot"
+                class="object-cover md:h-[400px] md:w-[1400px]"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title pb-6 text-2xl">CSBH Movies</h2>
+              <p>
+                CSBH Movies is a straightforward movie ticketing website that
+                lets customers browse and book tickets for the latest films. It
+                offers a seamless online booking experience focused on
+                convenience and ease of use.
+              </p>
+              <div>
+                <div class="badge badge-outline badge-md sm:badge-lg">
+                  Visual Basic
+                </div>
+                <div class="badge badge-outline badge-md sm:badge-lg">
+                  Asp.net
+                </div>
+              </div>
+              <div class="card-actions items-center justify-end">
+                <a
+                  href="https://github.com/MrkDchvz/Movie-Ticketing-System-CSBH-"
+                  class="btn btn-primary flex items-center"
+                >
+                  <i class="fa-brands fa-github text-lg"></i>
+                  <span class="text-lg">Github</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- PROJECT 3: Talipapa Inventory -->
+          <div
+            class="project-card card h-3/6 bg-base-100 shadow-xl md:card-side"
+          >
+            <figure>
+              <img
+                src="./assets/talipapa.PNG"
+                alt="Barrel Bird Gameplay screenshot"
+                class="object-cover md:h-[400px] md:w-[1400px]"
+              />
+            </figure>
+            <div class="card-body">
+              <h2 class="card-title pb-6 text-2xl">Talipapa Inventory</h2>
+              <p>
+                Talipapa Inventory System is a Java-based inventory management
+                solution powered by MySQL, designed for efficient tracking and
+                organization of products. It streamlines stock management,
+                making it easy to monitor inventory levels, updates, and
+                transactions.
+              </p>
+              <div>
+                <div class="badge badge-outline badge-md sm:badge-lg">Java</div>
+                <div class="badge badge-outline badge-md sm:badge-lg">
+                  MySQL
+                </div>
+              </div>
+              <div class="card-actions items-center justify-end">
+                <a
+                  href="https://github.com/MrkDchvz/talipapa_system"
+                  class="btn btn-primary flex items-center"
+                >
+                  <i class="fa-brands fa-github text-lg"></i>
+                  <span class="text-lg">Github</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT ME -->
-      <section id="contact " class="hero min-h-screen">
+      <section id="contact" class="hero min-h-screen">
         <div class="hero-content text-center">
           <div class="max-w-md">
             <h3 class="text-5xl font-bold sm:text-7xl">Contact Me</h3>
@@ -287,7 +462,7 @@
                 href="https://linkedin.com/in/mark-dechavez"
                 target="_blank"
                 class="link text-lg sm:text-3xl"
-                >linkedin</a
+                >Linkedin</a
               >
             </div>
           </div>
