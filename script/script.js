@@ -34,10 +34,7 @@ function heroTextAnimation() {
 
 let tlHero = gsap.timeline();
 
-tlHero
-  .add(loadScreen())
-  .add(blinkCaret().repeat(-1))
-  .add(heroTextAnimation(), "=-.3");
+tlHero.add(blinkCaret().repeat(-1)).add(heroTextAnimation(), "=-.3");
 
 // Terminal Animation
 function TerminalDetails() {
