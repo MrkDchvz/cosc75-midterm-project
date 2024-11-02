@@ -8,49 +8,6 @@ window.onscroll = function () {
   progressBarScroll(progressBar);
 };
 
-// Loading Screen
-function loadScreen() {
-  let tl = gsap.timeline();
-  tl.from("#loading-letter", {
-    duration: 1.5,
-    opacity: 0,
-    yPercent: 100,
-    ease: "power4",
-    stagger: 0.1,
-  })
-    .to("#loading-letter", {
-      opacity: 0,
-      duration: 0.1,
-      onComplete: () => {
-        gsap.set("#loading-letter", { display: "none" });
-      },
-    })
-    .to(
-      "#loading-screen--left",
-      {
-        y: "-100%",
-        duration: 0.2,
-        onComplete: () => {
-          gsap.set("#loading-screen--left", { display: "none" });
-        },
-      },
-      "parralel2",
-    )
-    .to(
-      "#loading-screen--right",
-      {
-        y: "100%",
-        duration: 0.2,
-        onComplete: () => {
-          gsap.set("#loading-screen--right", { display: "none" });
-          document.body.classList.toggle("overflow-hidden");
-        },
-      },
-      "parralel2",
-    );
-  return tl;
-}
-
 // Text Animations
 const heroHeader = document.getElementById("hero-header-text");
 const caret = document.getElementById("caret");
