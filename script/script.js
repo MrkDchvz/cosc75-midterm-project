@@ -55,7 +55,11 @@ function TerminalDetails() {
       text: { value: "", opacity: 0, duration: 1 },
     })
     .set("#terminal__statement--4 .output-statement", { opacity: 1 })
-    .to("#terminal__statement--5 .input-statement", { opacity: 1 });
+    .from("#terminal__statement--5 .input-statement", {
+      text: { value: "", opacity: 0, duration: 1 },
+    })
+    .set("#terminal__statement--5 .output-statement", { opacity: 1 })
+    .to("#terminal__statement--6 .input-statement", { opacity: 1 });
 
   return tl;
 }
